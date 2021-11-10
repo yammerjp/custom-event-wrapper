@@ -1,3 +1,8 @@
-<script src="./dist/main.js"></script>
+<script type="module">
+import('/dist/main.js').then(_module => {
+  console.log(_module)
+    _module.hogeCustomEventWrapper.send({ hoge: 'hogestring', fuga: 3 })
+});
+</script>
 
 hello
